@@ -7,6 +7,8 @@ Step 1: Downloading third party libraries
 Step 2: Organizing your project structure
 	http://cliffmeyers.com/blog/2013/4/21/code-organization-angularjs-javascript
 Step 3: Adding the shell page:
+Step 4: “Booting up” our application
+Step 5: Configuring AngularJS Routes
 
 
 
@@ -27,3 +29,16 @@ TIL - lots of opionions on how to friggin organize angular files
 
 http://briantford.com/blog/huuuuuge-angular-apps.html
 http://joshdmiller.github.io/ng-boilerplate/#/home
+
+
+Step 4: “Booting up” our application
+
+“app.js” =  file is responsible to create modules in applications, in our case we’ll have a single module called “FoursquareApp”, we can consider module as collection of services, directives, filters which is used in the application. Each module has configuration block where it gets applied to the application during the bootstrap process.
+
+Step 5: Configuring AngularJS Routes
+
+Our application will have three different views: (For now you can think about them as pages),
+
+View for displaying search results mapped to route (URL) “/explore“.
+View for displaying user bookmarked places mapped to route (URL) ”/places“.
+View for about page mapped to route (URL) ”/about“.
