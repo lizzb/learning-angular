@@ -29,13 +29,15 @@ app.config(function ($routeProvider) {
  	to URL “/explore” when ever it didn’t find any matching URL 
  	by using the “otherwise” function.
  	*/
+    //"/app/views/myplaces.html"
 
     $routeProvider.when("/explore", {
         controller: "placesExplorerController",
-        //templateUrl: "../views/placesresults.html"
-        templateUrl: "../bot4square/views/myplaces.html" //"/app/views/myplaces.html"
+        templateUrl: "/bot4square/views/myplaces.html" 
 
     });
+
+            //templateUrl: "../views/placesresults.html"
 
 
 /*
