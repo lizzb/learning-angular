@@ -1,0 +1,29 @@
+Building SPA using AngularJS – Part 1
+
+
+http://bitoftech.net/2014/01/13/building-spa-using-angularjs-part-1/
+
+Step 1: Downloading third party libraries
+Step 2: Organizing your project structure
+	http://cliffmeyers.com/blog/2013/4/21/code-organization-angularjs-javascript
+Step 3: Adding the shell page:
+
+
+
+
+
+
+
+
+
+
+
+index.html = the “Single Page” which is a container for our application, it will contain the navigation menu and Angular directive for rendering different application views “pages” using JS without the need to download new page from the server (thereby gaining performance because we are not downloading new HTML page each time the user navigating to a new page.) 
+
+After adding the “index.html” page we need to reference the 3rd party JavaScript and CSS files needed as the below:
+
+
+TIL - lots of opionions on how to friggin organize angular files
+
+http://briantford.com/blog/huuuuuge-angular-apps.html
+http://joshdmiller.github.io/ng-boilerplate/#/home
