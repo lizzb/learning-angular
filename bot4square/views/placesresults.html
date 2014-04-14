@@ -12,6 +12,23 @@ I’m using Bootstrap to style the application,  Source code for application on 
     </div>
 </div>
 -->
+
+<!-- ow is an explanation of what we did on this view:
+
+We’ve used ng-model with model “exploreNearby”, and “exploreQuery”, so once we change the text into the input fields, the models will get updated directly.
+
+e’ve wired the click event for the explore button with the function “doSearch()” in the controller by using ng-click directives. 
+
+We’ve used ng-repeat to iterate through the array of filtered places then we can bind the view with each place, notice how we created <li> tag for each place. 
+
+Inside ng-repeat we’re able to drill into single place data and print it on the view, for example to print place name we’ve used {{item.venue.name}}, as well we’re able to execute helper functions in this simple way: ng-src=”{{buildCategoryIcon(item.venue.categories[0].icon)}}
+
+We’ve used built-in filters for formatting decimal numbers {{item.venue.rating | number:1}}, you can find more infor about Angular built-in filters here.
+
+We’ve implemented pagination using Angular Bootstrap UI directive named “data-pagination“, by using this we’re able to implement server side pagination. This pagination control is flexible, you can check how to customize it here.
+
+We’ve added a link with title “Bookmark Place” which will be used for saving user favorite places, we’ll implement the function “bookmarkPlace()” in the next post.
+-->
 <div>
     <form class="form-horizontal">
         <div class="form-group">

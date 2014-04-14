@@ -152,5 +152,41 @@ to execute our custom filter by calling:
 */
 $filter("placeNameCategoryFilter")($scope.places, filterInput);
 
+
+
+/*
+part 2 step 5
+Till this moment Angular is not aware that 
+the new view and controller created are tied together, previously we did this using $routeProvider while booting up our application, but in the case of using $modal service we can inform Angular about this relation once we insentiate the modal, remember that we want to display the view as a modal not as partial view, take a look on the code snippet below inside “placesExplorerController”:
+
+By looking at the code above, you will notice that we’ve injected the new service “placesPhotosService” into the controller so we can issue HTTP Get request. Once we receive the 9 thumbnails successfully from the API, we’ll call $modal.open and inject the template URL, and controller in the configuration section, once this is done Angular will be aware  that this template is mapped to this controller. As well we’ve passed the place name and array of 9 thumbnails to the “placesPhotosController”. The final result will be as the image below:
+*/
+
+$scope.showVenuePhotos = function (venueId, venueName) {
+ 
+    placesPhotosService.get({ venueId: venueId }, function (photosResult) {
+ 
+        var modalInstance = $modal.open({
+            templateUrl: 'app/views/placesphotos.html',
+            controller: 'placesPhotosController',
+            resolve: {
+                venueName: function () {
+                    return venueName;
+                },
+                venuePhotos: function () {
+                    return photosResult.response.photos.items;
+                }
+            }
+        });
+ 
+        modalInstance.result.then(function () {
+            //$scope.selected = selectedItem;
+        }, function () {
+            //alert('Modal dismissed at: ' + new Date());
+        });
+ 
+    });
+};
+
     
 });
