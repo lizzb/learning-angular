@@ -32,7 +32,9 @@ app.config(function ($routeProvider) {
 
     $routeProvider.when("/explore", {
         controller: "placesExplorerController",
-        templateUrl: "../bot4square/views/placesresults.html"
+        //templateUrl: "../views/placesresults.html"
+        templateUrl: "../bot4square/views/myplaces.html" //"/app/views/myplaces.html"
+
     });
 
 
@@ -43,7 +45,7 @@ configure $routeProvider so Angular will be aware that the view “myplaces.html
  
     $routeProvider.when("/places", {
         controller: "myPlacesController",
-        templateUrl: "../bot4square/views/myplaces.html" //"/app/views/myplaces.html"
+        templateUrl: "learning-angular/bot4square/views/myplaces.html" //"/app/views/myplaces.html"
     });
  
 });
