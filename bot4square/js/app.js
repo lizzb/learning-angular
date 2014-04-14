@@ -34,6 +34,20 @@ app.config(function ($routeProvider) {
         controller: "placesExplorerController",
         templateUrl: "/bot4square/views/placesresults.html"
     });
+
+
+/*
+configure $routeProvider so Angular will be aware that the view “myplaces.html” is mapped to the controller “myPlacesController” when the user request the URL “/places”
+*/
+    app.config(function ($routeProvider) {
+ 
+    $routeProvider.when("/places", {
+        controller: "myPlacesController",
+        templateUrl: "bot4square" //"/app/views/myplaces.html"
+    });
+ 
+});
+
     $routeProvider.otherwise({ redirectTo: "/explore" });
  
 });
