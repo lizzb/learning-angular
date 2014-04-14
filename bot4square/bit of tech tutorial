@@ -31,9 +31,13 @@ Step 2: Implementing business logic in controller:
 part 2 step 2 start implementing the functions and model needed to interact with our view “placesresults.html”, if you are following from the previous post, we’ve already created a controller named “placesExplorerController” with a single model (exploreNearby), now we need to expand the models and functions needed to build the app, I’ll paste most of the controller code below and will explain what is going in the next paragraph:
 
 
+see service js file
+
 Now we need to add the filter which will allow users to filter results returned, we’ll be filtering by Place Name or Place Category.
 
+Step 3: Adding custom filter:
 
+To define a custom filter we need to add new JS file named “placeNameCategoryFilter.js” to the folder “app–>filters”, open the file and paste the code below:
 
 
 -----------------------------------------------------------------------------

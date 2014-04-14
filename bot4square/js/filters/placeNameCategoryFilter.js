@@ -1,6 +1,7 @@
 //
 // Step 3: Adding custom filter:
-//
+//http://bitoftech.net/2014/01/13/building-spa-using-angularjs-part-2/
+
 app.filter("placeNameCategoryFilter", function () {
     return function (places, filterValue) {
         if (!filterValue) return places;
