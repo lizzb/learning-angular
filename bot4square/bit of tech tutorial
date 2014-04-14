@@ -1,3 +1,44 @@
+
+
+
+
+http://bitoftech.net/2014/01/13/building-spa-using-angularjs-part-2/
+Building SPA using AngularJS – Part 2
+
+previous post we have done all work needed to bootstrap our app with Angular, now we’ll focus on implementing the use cases... I will start building those requirements from bottom to top, so we’ll start by services then we move up to the view.
+
+Step 1: Adding service to communicate with Foursquare API:
+Step 2: Implementing business logic in controller:
+Step 3: Adding custom filter:
+Step 4: Modifying Places Results View:
+Step 5: Add modal view to view places images
+
+
+
+
+Step 1: Adding service to communicate with Foursquare API:
+
+
+services in Angular are singleton objects responsible of doing certain tasks, or they can be used for sharing business logic. To use those custom created services we just need to specify service name in controller, filters, directive, etc… and Angular will inject those singleton objects. Angular is built in a way that it will be able to manage those custom created services so we can use them any place in our app.
+There are different ways to create Angular Services, two of them are Service or Factory methods, both will provide us with a singleton shared object, and the only difference is how they are created, I won’t dig more into differences and we’ll use Factory for creating Services. You can read this informative stackoverflow question which highlights the differences.
+
+So let’s add new JS file named “placesExplorerService.js” to the folder “app–>services”, this service will be responsible to send HTTP requests to Foursquare explore places API. For more information about Foursquare explore places API and how you can get your own clientID and secret you can check the official documentation.
+
+
+Step 2: Implementing business logic in controller:
+
+
+part 2 step 2 start implementing the functions and model needed to interact with our view “placesresults.html”, if you are following from the previous post, we’ve already created a controller named “placesExplorerController” with a single model (exploreNearby), now we need to expand the models and functions needed to build the app, I’ll paste most of the controller code below and will explain what is going in the next paragraph:
+
+
+Now we need to add the filter which will allow users to filter results returned, we’ll be filtering by Place Name or Place Category.
+
+
+
+
+-----------------------------------------------------------------------------
+
+
 Building SPA using AngularJS – Part 1
 
 
@@ -18,13 +59,6 @@ Step 7: Wiring “FourSquareApp” module to our App
 
 
 In the next post we’ll start implementing the real business logic in this controller, make RESTful calls to foursquare API using angular services, and project the data in the view in a neat way.
-
-
-
-
-
-
-
 
 
 index.html = the “Single Page” which is a container for our application, it will contain the navigation menu and Angular directive for rendering different application views “pages” using JS without the need to download new page from the server (thereby gaining performance because we are not downloading new HTML page each time the user navigating to a new page.) 
