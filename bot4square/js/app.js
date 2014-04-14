@@ -33,9 +33,11 @@ app.config(function ($routeProvider) {
 
     $routeProvider.when("/explore", {
         controller: "placesExplorerController",
-        templateUrl: "../bot4square/views/myplaces.html" 
+        templateUrl: "learning-angular/bot4square/views/placesresults.html" 
 
     });
+
+    // "../bot4square/views/myplaces.html"  sort of worked no jk had curlies
 
             //templateUrl: "../views/placesresults.html"
 
