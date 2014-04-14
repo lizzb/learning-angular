@@ -1,0 +1,13 @@
+
+<!--
+I’m using Bootstrap to style the application,  Source code for application on GitHub has a lot extra html elements and CSS classes to make it responsive. Those have been removed from code snippets for clarity. By looking at the code snippet above you will notice that we used directive called “ng-model”, this directive is responsible for the two-way data binding, in simple words; we’ve bind the text input to the model “exploreNearby” so if the value of the text input has changed, thne the value of the model will be changed and vise verse. Notice how we do not use “$scope” object when we reference the model in the html, using the double curly brackets {{}} is the right way to reference model in the DOM elements i.e. {{exploreNearBy}}.
+-->
+
+<div>
+    <div>
+        <input type="text" data-ng-model="exploreNearby" />
+    </div>
+    <div>
+        <h5>Places found Near by ({{exploreNearby}})</h5>
+    </div>
+</div>
