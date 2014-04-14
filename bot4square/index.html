@@ -1,4 +1,7 @@
-<html>
+<html data-ng-app="FoursquareApp">
+<!--
+    This is the most forgotten step that usually devs fall into, we need to tell Angular in which part of our application should be active, we can have Mini-SPA i.e. part of the application is SPA and other parts are traditional client/server request. But in our case we want the entire application to use Angular, so the right place to add the directive “ng-app” is on html tag of the shell page “index.html”, ....
+    -->
 
 <!--
 index.html = the “Single Page” which is a container for our application, it will contain the navigation menu and Angular directive for rendering different application views “pages” using JS without the need to download new page from the server (thereby gaining performance because we are not downloading new HTML page each time the user navigating to a new page.) 
@@ -46,8 +49,25 @@ index.html = the “Single Page” which is a container for our application, it 
             Taiseer Joudeh Blog: <a href="http://www.bitoftech.net" target="_blank">bitoftech.net</a>
         </footer>
     </div>
+
+
+    
+    <div data-ng-view=""></div>
+    <!--
+    Step 7 stil part 1
+    By looking at the code snippet above we’ll notice that we added new directive called “ng-view” inside html body, this directive will act as a placeholder for our views, so each view configured in the routes will be loaded in this section of out shell page. In other words this directive will get replaced by the html content of our views, so in our case the html fragments in file “placesreuslts.html” will replace this directive. It is important to specify the module name “FoursquareApp” once we use ng-app attribute because in our case we are using modules. We can run the application now and test the routing configuration and the two way binding feature. Don’t forget to reference the 2 newly added JS files to the bottom of Index.html page as the code snippet below
+
+
+
+    -->
+
 </body>
 </html>
+
+
+
+
+
 <!-- 3rd party libraries -->
 <!--
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
@@ -57,17 +77,33 @@ index.html = the “Single Page” which is a container for our application, it 
 <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.9.0/ui-bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.9.0/ui-bootstrap-tpls.min.js"></script>
 -->
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular-route.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular-resource.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular-animate.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.9.0/ui-bootstrap.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.9.0/ui-bootstrap-tpls.min.js"></script>
 
 <!-- ^^^^^ reference the 3rd party JavaScript and CSS files needed ^^^^^ -->
-
+<!--
 <script src="./lib/js/angular/angular.min.js"></script>
 <script src="./lib/js/angular/angular-resource.min.js"></script>
 <script src="./lib/js/angular/angular-route.min.js"></script>
 <script src="./lib/js/angular/angular-animate.min.js"></script>
 <script src="./lib/js/angular-ui-bootstrap/ui-bootstrap-0.9.0.min.js"></script>
 <script src="./lib/js/angular-ui-bootstrap/ui-bootstrap-tpls-0.9.0.min.js"></script>
+-->
 
 
 
 <script src="lib/js/toaster.js"></script>
 <script src="lib/js/loading-bar.min.js"></script>
+
+
+
+<!-- Load app main script -->
+<script type="mce-text/javascript" src="./js/app.js"></script>
+<!-- Load controllers -->
+<script type="mce-text/javascript" src="./js/controllers/placesExplorerController.js"></script>
+
+

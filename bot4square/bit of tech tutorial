@@ -10,10 +10,14 @@ Step 3: Adding the shell page:
 Step 4: “Booting up” our application
 Step 5: Configuring AngularJS Routes
 Step 6: Adding our first controller and view
+
+	By looking at the code snippet above you will notice that we used directive called “ng-model”, this directive is responsible for the two-way data binding, in simple words; we’ve bind the text input to the model “exploreNearby” so if the value of the text input has changed, thne the value of the model will be changed and vise verse. Notice how we do not use “$scope” object when we reference the model in the html, using the double curly brackets {{}} is the right way to reference model in the DOM elements i.e. {{exploreNearBy}}.
+
 Step 7: Wiring “FourSquareApp” module to our App
 
 
 
+In the next post we’ll start implementing the real business logic in this controller, make RESTful calls to foursquare API using angular services, and project the data in the view in a neat way.
 
 
 
@@ -45,3 +49,9 @@ Our application will have three different views: (For now you can think about th
 View for displaying search results mapped to route (URL) “/explore“.
 View for displaying user bookmarked places mapped to route (URL) ”/places“.
 View for about page mapped to route (URL) ”/about“.
+
+
+
+Step 7: Wiring “FourSquareApp” module to our App
+
+This is the most forgotten step that usually devs fall into, we need to tell Angular in which part of our application should be active, we can have Mini-SPA i.e. part of the application is SPA and other parts are traditional client/server request. But in our case we want the entire application to use Angular, so the right place to add the directive “ng-app” is on html tag of the shell page “index.html”, it will look at the code snippet below:
