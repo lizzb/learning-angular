@@ -33,12 +33,7 @@ app.config(function ($routeProvider) {
 
     $routeProvider.when("/explore", {
         controller: "placesExplorerController",
-<<<<<<< HEAD
-        templateUrl: "learning-angular/bot4square/views/placesresults.html" 
-
-=======
         templateUrl: "learning-angular/bot4square/views/placesresults.html"
->>>>>>> master
     });
 //templateUrl: "../views/placesresults.html"
 //"/app/views/myplaces.html"
