@@ -33,7 +33,7 @@ app.config(function ($routeProvider) {
 
     $routeProvider.when("/explore", {
         controller: "placesExplorerController",
-        templateUrl: "/bot4square/views/placesresults.html"
+        templateUrl: "../bot4square/views/placesresults.html"
     });
 //templateUrl: "../views/placesresults.html"
 //"/app/views/myplaces.html"
@@ -46,14 +46,16 @@ app.config(function ($routeProvider) {
 /*
 configure $routeProvider so Angular will be aware that the view “myplaces.html” is mapped to the controller “myPlacesController” when the user request the URL “/places”
 */
-    app.config(function ($routeProvider) {
+    //app.config(function ($routeProvider) {
  
     $routeProvider.when("/places", {
         controller: "myPlacesController",
-        templateUrl: "/bot4square/views/myplaces.html" //"/app/views/myplaces.html"
+        templateUrl: "../bot4square/views/myplaces.html" 
     });
  
-});
+//});
+
+    //"/app/views/myplaces.html"
 
     $routeProvider.otherwise({ redirectTo: "/explore" });
  
