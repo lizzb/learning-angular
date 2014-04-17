@@ -33,7 +33,7 @@ app.config(function ($routeProvider) {
 
     $routeProvider.when("/explore", {
         controller: "placesExplorerController",
-        templateUrl: "/views/placesresults.html"
+        templateUrl: "/../views/placesresults.html"
         //templateUrl: "./bot4square/views/placesresults.html" 
         //templateUrl: "../bot4square/views/placesresults.html"
         //templateUrl: "/learning-angular/bot4square/views/placesresults.html"
