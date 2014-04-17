@@ -33,16 +33,16 @@ app.config(function ($routeProvider) {
 
     $routeProvider.when("/explore", {
         controller: "placesExplorerController",
+        templateUrl: "./bot4square/views/placesresults.html" 
         //templateUrl: "../bot4square/views/placesresults.html"
         //templateUrl: "/learning-angular/bot4square/views/placesresults.html"
-        templateUrl: "./bot4square/views/placesresults.html" 
+        // templateUrl: "/learning-angular/bot4square/views/placesresults.html"
     });
+
 //templateUrl: "../views/placesresults.html"
 //"/app/views/myplaces.html"
-
-    // "../bot4square/views/myplaces.html"  sort of worked no jk had curlies
-
-            //templateUrl: "../views/placesresults.html"
+// "../bot4square/views/myplaces.html"  sort of worked no jk had curlies
+//templateUrl: "../views/placesresults.html"
 
 
 /*
@@ -52,20 +52,17 @@ configure $routeProvider so Angular will be aware that the view “myplaces.html
  
     $routeProvider.when("/places", {
         controller: "myPlacesController",
+        
+        templateUrl: "./bot4square/views/myplaces.html" 
+        //"/app/views/myplaces.html"
         //templateUrl: "../bot4square/views/myplaces.html" 
         //templateUrl: "/learning-angular/bot4square/views/myplaces.html" 
         //"/app/views/myplaces.html"
         //templateUrl: "/learning-angular/bot4square/views/myplaces.html" //"/app/views/myplaces.html"
-        templateUrl: "./bot4square/views/myplaces.html" 
-        //"/app/views/myplaces.html"
     });
- 
-//});
-
-    //"/app/views/myplaces.html"
 
     $routeProvider.otherwise({ redirectTo: "/explore" });
  
 });
 
-       // templateUrl: "/learning-angular/bot4square/views/placesresults.html"
+       
